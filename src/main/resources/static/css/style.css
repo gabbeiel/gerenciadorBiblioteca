@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap');
+
+*{
+    margin: 0;
+    font-family: 'Signika', sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    color:white;
+}
+
+
+body{
+    background: #251f19;
+}
+header{
+    background-color: #553311;
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+.headerContent{
+    padding: 15px 50px;
+    width: 90%;
+    margin: auto;
+    height: auto;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+}
+.headerContent img{
+    align-items: flex-start;
+}
+.logo{
+    text-align: center;
+    width: 55px;
+}
+.etecLogo{
+    width: 100%;
+    height: auto;
+    
+}
+.search{
+    width: 60%;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+}
+.select{
+    border: none;
+    color:black;
+}
+.searchBar{
+    width: 100%;
+}
+.searchBar input{
+    width: 100%;
+    height: 30px;
+    border: 0px solid;
+}
+.searchBtn{
+    background-color: #251f19;
+    border: none;
+    color: white;
+    width: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.searchBtn:hover{
+    cursor: pointer;
+    background-color: #4d3e2f;
+}
+.icons{
+    display: flex;
+    justify-content: space-around;
+    width: 10%;
+}
+.login{
+    min-width: 40px;
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnLogin{
+    background: none;
+    width: 100%;
+    border-radius: 8px;
+    
+}
+.btnLogin:hover{
+    border: 2px solid #251f19;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.btnLogin:hover{
+    border: 2px solid #251f19;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.icon{
+    width: 30px;
+}
+.notifi{
+    padding: 2px;
+    min-width: 40px;
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnNotifi{
+    background: none;
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid #b20000;
+}
+.btnNotifi:hover{
+    border: 2px solid #8b0202;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.iconNotifi{
+    width: 28px;
+}
+
+.banner{
+    width: 100%;
+    height: 400px;
+    background-image: url('../img/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+
+.tituloSecao h1{
+    font-size: 24px;
+}
+
+main{
+    width: 90%;
+    margin: auto;
+
+}
+.livros{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.livro{
+    -webkit-box-shadow: 3px 7px 10px 1px rgba(0,0,0,0.38);
+-moz-box-shadow: 3px 7px 10px 1px rgba(0,0,0,0.38);
+box-shadow: 3px 7px 10px 1px rgba(0,0,0,0.38);
+    width: 270px;
+    margin: 10px;
+    height:  470px;
+    background-color: #553311;
+}
+.link{
+    text-decoration: none;
+}
+.livroImg{
+    width: 100%;
+    height: 370px;
+}
+.livroImg img{
+    width: 100%;
+    height: 100%;;
+    
+}
+.livroContent{
+    height: 140px;
+}
+.livroTxt{
+    width: 100%;
+    height: 110px;
+}
+.txtTitulo{
+    padding: 5px 10px;
+    font-size: 16px;
+    height: auto;
+    font-weight: 200; 
+    min-height: 60px;
+    color: rgb(233, 233, 233);
+}
+.txtAutor{
+    padding: 5px 10px;
+    font-size: 14px;
+    height: auto;
+    font-style: italic;
+    color: rgb(148, 148, 148);
+}
+.MaisLivros{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+}
+.MaisLivros a{
+    font-size: 17px;
+    font-style: italic;
+}
+
+
+.escurecido {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.85;
+    z-index: 2;
+}
+
+footer{
+    background-color: #553311;
+    color: rgb(233, 233, 233);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 25px;
+}
+
+/*Tela de login------------------------------------------------------------------------------*/
+.telaLogin {
+    color: black;
+    z-index: 3;
+    margin: auto;
+    text-align: center;
+    width: 375px;
+    height: 350px;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    margin-left: -187px;
+    background-color: #553311;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#telaCadastro {
+    height: 420px;
+}
+
+.formLogin {
+    display: flex;
+    flex-direction: column;
+}
+
+.ttlLogin {
+    display: flex;
+    justify-content: baseline;
+}
+
+.ttlUser {
+    display: flex;
+    justify-content: first baseline;
+    flex-direction: column;
+}
+
+.labelNome {
+    text-align: justify;
+    margin-top: 20px;
+    color: white;
+    letter-spacing: 0.75px;
+}
+
+.labelEmail {
+    text-align: justify;
+    margin-top: 20px;
+    color: white;
+    letter-spacing: 0.75px;
+}
+
+.labelSenha {
+    text-align: justify;
+    margin-top: 10px;
+    color: white;
+    letter-spacing: 0.75px;
+}
+
+#txtNome {
+    color:black;
+    width: 300px;
+    height: 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px #cccccc solid;
+}
+
+#txtSenha {
+    color:black;
+    width: 300px;
+    height: 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px #cccccc solid;
+}
+
+#txtEmail {
+    color:black;
+    width: 300px;
+    height: 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px #cccccc solid;
+}
+
+#btnCancelar {
+    width: 100%;
+    height: 35px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: #413932;
+    border: none;
+}
+
+#btnCancelarCadastro {
+    width: 100%;
+    height: 35px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: #413932;
+    border: none;
+}
+
+#btnEntrar {
+    width: 100%;
+    height: 35px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: #251f19;
+    border: none;
+}
+
+
+.escondido {
+    display: none;
+}
+
+.txtCadastro{
+    margin-top: 15px;
+    color: white;
+}
+
+.txtCadastro a{
+    color: white;
+}
