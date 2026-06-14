@@ -12,7 +12,7 @@
     <header>
         <section class="headerContent">
             <div class="logo">
-                <img th:href="@{img/logo.png}" class="etecLogo">
+                <img th:src="@{/img/logo.png}" class="etecLogo">
             </div>
             <div class="search">
                 <!--<select class="select">
@@ -44,6 +44,7 @@
             <h1>Livros</h1>
         </div>
         <section class="livros">
+            <!--
             <a href="index.html"><div class="livro">
                 <div class="livroImg">
                     <img th:src="@{img/livros/2.jpg}" alt="">
@@ -87,19 +88,20 @@
                         <p class="txtAutor">Nome de Autor</p>
                     </div>
                 </div>
-            </div></a>
-            <!--
-            <a th:href="'/livro/' + ${liv.id}"><div class="livro">
+            </div></a>-->
+            <!--th:href="@{/crialivro}"
+            -->
+            <a th:each="liv : ${livros}" th:href="@{'/livro/' + ${liv.id.id}}"><div class="livro">
                 <div class="livroImg">
                     <img th:src="@{img/livros/3.jpg}" alt="">
                 </div>
                 <div class="livroContent">
                     <div class="livroTxt">
-                        <p class="txtTitulo" th:text="${liv.titulo}"></p>
-                        <p class="txtAutor" th:text="${liv.autor}"></p>
+                        <p class="txtTitulo" th:text="${liv.nome.nome}"></p>
+                        <p class="txtAutor" th:text="${liv.autor.nome.nome}"></p>
                     </div>
                 </div>
-            </div></a>-->
+            </div></a>
         <div class="lerMais">
             <a href="livros.html">Ler mais...</a>
         </div>

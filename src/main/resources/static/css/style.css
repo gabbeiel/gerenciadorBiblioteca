@@ -205,6 +205,12 @@ box-shadow: 3px 7px 10px 1px rgba(0,0,0,0.38);
     font-style: italic;
 }
 
+.lerMais{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    display: none;
+}
 
 .escurecido {
     width: 100%;
@@ -248,7 +254,32 @@ footer{
 }
 
 #telaCadastro {
+    height: 480px;
+}
+
+#telaAutor {
+    height: 480px;
+}
+
+#telaEditora {
+    height: 480px;
+}
+
+#telaCriaLivro {
     height: 420px;
+}
+/*coisa pra mudar*/
+#telaEditora {
+    height: auto;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 20px 15px;
+}
+
+.formSection {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255,255,255,0.25);
 }
 
 .formLogin {
@@ -283,7 +314,35 @@ footer{
 
 .labelSenha {
     text-align: justify;
-    margin-top: 10px;
+    margin-top: 5px;
+    color: white;
+    letter-spacing: 0.75px;
+}
+
+.labelNomeCadastro {
+    text-align: justify;
+    margin-top:5px;
+    color: white;
+    letter-spacing: 0.75px;
+}
+
+.labelEmailCadastro {
+    text-align: justify;
+    margin-top: 5px;
+    color: white;
+    letter-spacing: 0.75px;
+}
+
+.labelSenhaCadastro {
+    text-align: justify;
+    margin-top: 5px;
+    color: white;
+    letter-spacing: 0.75px;
+}
+
+.labelSenhaCadastro {
+    text-align: justify;
+    margin-top: 5px;
     color: white;
     letter-spacing: 0.75px;
 }
@@ -319,6 +378,46 @@ footer{
     padding: 5px;
     margin-top: 5px;
     border: 1px #cccccc solid;
+}
+
+
+#txtISBN {
+    color:black;
+    width: 300px;
+    height: 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px #cccccc solid;
+}
+
+#txtSinopse {
+    color:black;
+    width: 300px;
+    height: 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px #cccccc solid;
+}
+
+
+#autorSelect, #editoraSelect {
+    color:black;
+    width: 310px;
+    height: 36px;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 4px 6px;
+    margin-top: 5px;
+    border: 1px #cccccc solid;
+    background-color: white;
+}
+
+#autorSelect option, #editoraSelect option {
+    color: black;
 }
 
 #btnCancelar {
@@ -366,7 +465,7 @@ footer{
 }
 
 .txtCadastro{
-    margin-top: 15px;
+    margin-top: 5px;
     color: white;
 }
 

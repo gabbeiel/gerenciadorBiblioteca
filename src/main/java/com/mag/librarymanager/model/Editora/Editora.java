@@ -1,8 +1,13 @@
 package com.mag.librarymanager.model.Editora;
 
+import java.util.Map;
+
 public class Editora {
     private EditoraId id;
     private EditoraNome nome;
+
+    public Editora() {
+    }
 
     public Editora(EditoraId id, EditoraNome nome) {
         this.id = id;
@@ -29,4 +34,9 @@ public class Editora {
         this.nome = nome;
     }
 
+    public static Editora converte(Map<String, Object> registro) {
+        int idEditora = (int) registro.get("id_editora");
+        String nomeEditora = (String) registro.get("nm_editora");
+        return new Editora(new EditoraId(idEditora), new EditoraNome(nomeEditora));
+    }
 }

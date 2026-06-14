@@ -16,6 +16,8 @@ public class Livro {
     private LivroSinopse sinopse;
     private Autor autor;
     private Editora editora;
+    private int idAutor;
+    private int idEditora;
     
     public Livro() {}
 
@@ -82,6 +84,22 @@ public class Livro {
 
     public void setEditora(Editora editora) {
         this.editora = editora;
+    }
+
+    public int getIdAutor() {
+        return idAutor;
+    }
+
+    public int getIdEditora() {
+        return idEditora;
+    }
+
+    public void setIdAutor(int idAutor) {
+        this.idAutor = idAutor;
+    }
+
+    public void setIdEditora(int idEditora) {
+        this.idEditora = idEditora;
     }
 
     public static Livro converteLivro(Map<String, Object> registros) {

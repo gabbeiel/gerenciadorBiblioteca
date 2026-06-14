@@ -35,6 +35,23 @@ public class LivroDAO {
         jdbc.update(sql, obj);
     }
 
+    public void atualizarLivro(int id, Livro livro) {
+        String sql = "UPDATE livro SET nm_livro = ?, nr_isbn = ?, ds_sinopse = ?, id_autor = ?, id_editora = ? WHERE id_livro = ?";
+        Object[] obj = new Object[6];
+        obj[0] = livro.getNome().nome();
+        obj[1] = livro.getIsbn().isbn();
+        obj[2] = livro.getSinopse().sinopse();
+        obj[3] = livro.getAutor().getId().id();
+        obj[4] = livro.getEditora().getId().id();
+        obj[5] = id;
+        jdbc.update(sql, obj);
+    }
+
+    public void excluirLivro(int id) {
+        String sql = "DELETE FROM livro WHERE id_livro = ?";
+        jdbc.update(sql, id);
+    }
+
     public Livro listarLivroPorId(int id) {
         String sql = "SELECT l.id_livro, l.nm_livro, l.nr_isbn, l.ds_sinopse, a.id_autor, a.nm_autor, e.id_editora, e.nm_editora " +
                      "FROM livro l " +

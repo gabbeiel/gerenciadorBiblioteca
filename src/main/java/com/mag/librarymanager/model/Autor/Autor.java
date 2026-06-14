@@ -1,5 +1,7 @@
 package com.mag.librarymanager.model.Autor;
 
+import java.util.Map;
+
 public class Autor {
     public AutorId id;
     public AutorNome nome;
@@ -29,5 +31,11 @@ public class Autor {
 
     public void setId(AutorId id) {
         this.id = id;
+    }
+
+    public static Autor converte(Map<String, Object> registro) {
+        int idAutor = (int) registro.get("id_autor");
+        String nomeAutor = (String) registro.get("nm_autor");
+        return new Autor(new AutorId(idAutor), new AutorNome(nomeAutor));
     }
 }

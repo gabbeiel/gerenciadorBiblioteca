@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS livro (
     id_livro SERIAL PRIMARY KEY,
     nm_livro VARCHAR(100),
     nr_isbn VARCHAR(13),
-    ds_sinopse VARCHAR(200),
+    ds_sinopse VARCHAR(1000),
     id_autor INT,
     FOREIGN KEY (id_autor) REFERENCES autor(id_autor),
     id_editora INT,

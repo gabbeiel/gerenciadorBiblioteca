@@ -12,7 +12,7 @@
     <header>
         <section class="headerContent">
             <div class="logo">
-                <img th:href="@{img/logo.png}" class="etecLogo">
+                <img th:src="@{/img/logo.png}" class="etecLogo">
             </div>
             <div class="search">
                 
@@ -29,30 +29,26 @@
         <div id="telaCadastro" class="telaLogin">
             <form th:action="@{/crialivro}" method=post th:object="${livro}" class="formLogin">
                 <div class="ttlLogin"><h1>Criar livro</h1></div>
-                <!--
-                <label for="txtNome" class="labelNome"> <b> Nome </b> </label>
+                <label for="txtNome" class="labelNomeCadastro"> <b> Nome </b> </label>
                 <input type="text" th:field="*{nome}" id="txtNome">
 
-                <label for="txtEmail" class="labelEmail"> <b> ISBN</b> </label>
-                <input type="text"  th:field="*{isbn}" id="txtEmail">
+                <label for="txtISBN" class="labelEmailCadastro"> <b> ISBN</b> </label>
+                <input type="text"  th:field="*{isbn}" id="txtISBN">
 
-                <label for="txtSenha" class="labelSenha"> <b> Sinopse </b> </label>
-                <input type="text" th:field="*{sinopse}" id="txtSenha">
+                <label for="txtSinopse" class="labelSenhaCadastro"> <b> Sinopse </b> </label>
+                <input type="text" th:field="*{sinopse}" id="txtSinopse">
 
-                <label for="txtSenha" class="labelSenha"> <b> Autor </b> </label>
-                <input type="text" th:field="*{autor}" id="txtSenha">
-                <label for="cars">Choose a car:</label>
-
-                <select name="Autor" id="autor">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
+                <label for="autorSelect" class="labelSenhaCadastro"> <b> Autor </b> </label>
+                <select th:field="*{idAutor}" id="autorSelect">
+                    <option th:each="a : ${autores}" th:value="${a.id.id}" th:text="${a.nome.nome}">Autor</option>
                 </select>
+                <span class="txtCadastro"> <a th:href="@{/criarautor}">Criar novo autor</a> </span>
 
-
-                <label for="txtSenha" class="labelSenha"> <b> Editora </b> </label>
-                <input type="text" th:field="*{editora}" id="txtSenha">-->
+                <label for="editoraSelect" class="labelSenhaCadastro"> <b> Editora </b> </label>
+                <select th:field="*{idEditora}" id="editoraSelect">
+                    <option th:each="e : ${editoras}" th:value="${e.id.id}" th:text="${e.nome.nome}">Editora</option>
+                </select>
+                <span class="txtCadastro"> <a th:href="@{/criareditora}">Criar nova editora</a> </span>
 
                 <input type="submit" value="Criar livro" id="btnEntrar">
                 

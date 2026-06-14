@@ -15,35 +15,31 @@
                 <img th:src="@{/img/logo.png}" class="etecLogo">
             </div>
             <div class="search">
-                
             </div>
             <div class="icons">
-                <div class="login btnLogin">
-                </div>
-                <div class="notifi">
-                </div>
+                <div class="login btnLogin"></div>
+                <div class="notifi"></div>
             </div>
         </section>
     </header>
     <main>
-        <div id="telaCadastro" class="telaLogin">
-            <form th:action="@{/cadastro}" method=post th:object="${usuario}" class="formLogin">
-                <div class="ttlLogin"><h1>Criar conta</h1></div>
-                
-                <label for="txtNome" class="labelNome"> <b> Nome </b> </label>
-                <input type="text" th:field="*{nome}" id="txtNome">
+        <div id="telaEditora" class="telaLogin">
+            <form th:action="@{'/criareditora/' + ${id}}" method="post" th:object="${editora}" class="formLogin">
+                <div class="ttlLogin"><h1>Editar editora</h1></div>
 
-                <label for="txtEmail" class="labelEmail"> <b> Email</b> </label>
-                <input type="text"  th:field="*{email}" id="txtEmail">
+                <label for="txtNome" class="labelNomeCadastro"> <b> Nome </b> </label>
+                <input type="text" th:value="${editora.nome.nome}" name="nome" id="txtNome">
 
-                <label for="txtSenha" class="labelSenha"> <b> Senha </b> </label>
-                <input type="password" th:field="*{senha}" id="txtSenha">
-                <input type="submit" value="Criar conta" id="btnEntrar">
-                
+                <input type="submit" value="Salvar editora" id="btnEntrar">
             </form>
+
+            <div class="formSection">
+                <form th:action="@{'/criareditora/' + ${id} + '/deletar'}" th:object="${editora}" method="post" class="formLogin">
+                    <input type="submit" value="Excluir editora" id="btnEntrar">
+                </form>
+            </div>
         </div>
     </main>
-    
 </body>
 <footer>
     <div>

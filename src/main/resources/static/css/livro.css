@@ -45,3 +45,8 @@
     padding: 5px;
     cursor: pointer;
 }
+
+.btnEditar{
+    display: flex;
+    justify-content: end;
+}
