@@ -13,7 +13,7 @@
     <header>
         <section class="headerContent">
             <div class="logo">
-                <img th:src="@{/img/logo.png}" class="etecLogo" alt="Logo">
+                <a th:href="@{/}"><img th:src="@{/img/logo.png}" class="etecLogo"></a>
             </div>
             <div class="search">
             </div>
@@ -32,7 +32,7 @@
         <section>
             <div class="livroInfo">
                 <div class="livroImg">
-                    <img th:src="@{/img/livros/1.jpg}" alt="Capa do livro">
+                    <img th:src="@{/img/livros/3.jpg}" alt="Capa do livro">
                 </div>
                 <div class="livroDetalhes">
                     <h1 th:text="${livro.nome.nome}">Título</h1>

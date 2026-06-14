@@ -124,6 +124,9 @@ public class MainController {
     @PostMapping("/criarautor/{id}/deletar")
     public String deletarAutor(@PathVariable int id) {
         AutorService as = context.getBean(AutorService.class);
+        if(as.existeLivroComAutor(id)) {
+            return "redirect:/criarautor";
+        }
         as.excluirAutor(id);
         return "redirect:/criarautor";
     }
@@ -169,6 +172,9 @@ public class MainController {
     @PostMapping("/criareditora/{id}/deletar")
     public String deletarEditora(@PathVariable int id) {
         EditoraService es = context.getBean(EditoraService.class);
+        if(es.existeLivroComEditora(id)) {
+            return "redirect:/criareditora";
+        }
         es.excluirEditora(id);
         return "redirect:/criareditora";
     }

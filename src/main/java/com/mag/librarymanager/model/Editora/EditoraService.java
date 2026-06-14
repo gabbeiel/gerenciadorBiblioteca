@@ -29,4 +29,8 @@ public class EditoraService {
     public void excluirEditora(int id) {
         edao.excluirEditora(id);
     }
+
+    public boolean existeLivroComEditora(int id) {
+        return edao.existeLivroComEditora(id);
+    }
 }

@@ -12,7 +12,7 @@
     <header>
         <section class="headerContent">
             <div class="logo">
-                <img th:src="@{/img/logo.png}" class="etecLogo">
+                <a th:href="@{/}"><img th:src="@{/img/logo.png}" class="etecLogo"></a>
             </div>
             <div class="search">
                 <!--<select class="select">
@@ -44,53 +44,6 @@
             <h1>Livros</h1>
         </div>
         <section class="livros">
-            <!--
-            <a href="index.html"><div class="livro">
-                <div class="livroImg">
-                    <img th:src="@{img/livros/2.jpg}" alt="">
-                </div>
-                <div class="livroContent">
-                    <div class="livroTxt">
-                        <p class="txtTitulo">Dom Quixote de La Mancha</p>
-                        <p class="txtAutor">Nome de Autor</p>
-                    </div>
-                </div>
-            </div></a>
-            <a href="index.html"><div class="livro">
-                <div class="livroImg">
-                    <img th:src="@{img/livros/3.jpg}" alt="">
-                </div>
-                <div class="livroContent">
-                    <div class="livroTxt">
-                        <p class="txtTitulo">Percy jackson e os Olimpianos</p>
-                        <p class="txtAutor">Nome de Autor</p>
-                    </div>
-                </div>
-            </div></a>
-            <a href="index.html"><div class="livro">
-                <div class="livroImg">
-                    <img th:src="@{img/livros/3.jpg}" alt="">
-                </div>
-                <div class="livroContent">
-                    <div class="livroTxt">
-                        <p class="txtTitulo">Percy jackson e os Olimpianos</p>
-                        <p class="txtAutor">Nome de Autor</p>
-                    </div>
-                </div>
-            </div></a>
-            <a href="index.html"><div class="livro">
-                <div class="livroImg">
-                    <img th:src="@{img/livros/3.jpg}" alt="">
-                </div>
-                <div class="livroContent">
-                    <div class="livroTxt">
-                        <p class="txtTitulo">Percy jackson e os Olimpianos</p>
-                        <p class="txtAutor">Nome de Autor</p>
-                    </div>
-                </div>
-            </div></a>-->
-            <!--th:href="@{/crialivro}"
-            -->
             <a th:each="liv : ${livros}" th:href="@{'/livro/' + ${liv.id.id}}"><div class="livro">
                 <div class="livroImg">
                     <img th:src="@{img/livros/3.jpg}" alt="">

@@ -29,4 +29,8 @@ public class AutorService {
     public void excluirAutor(int id) {
         adao.excluirAutor(id);
     }
+
+    public boolean existeLivroComAutor(int id) {
+        return adao.existeLivroComAutor(id);
+    }
 }

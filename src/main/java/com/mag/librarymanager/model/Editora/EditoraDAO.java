@@ -57,4 +57,10 @@ public class EditoraDAO {
         String sql = "DELETE FROM editora WHERE id_editora = ?";
         jdbc.update(sql, id);
     }
+
+    public boolean existeLivroComEditora(int id) {
+        String sql = "SELECT COUNT(*) FROM livro WHERE id_editora = ?";
+        Integer count = jdbc.queryForObject(sql, Integer.class, id);
+        return count != null && count > 0;
+    }
 }
