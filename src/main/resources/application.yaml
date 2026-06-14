@@ -4,9 +4,9 @@ server:
 spring:
   datasource:
     platform: postgres
-    url: jdbc:postgresql://127.0.0.1:5432/librarymanager
-    username: postgres
-    password: 123
+    url: jdbc:postgresql://dpg-d8f0ugi8qa3s738f9h50-a.oregon-postgres.render.com:5432/librarymanager
+    username: admin
+    password: 2fovTJwg8WuCSGePI5RQ4Wn830zBmK8w
     driverClassName: org.postgresql.Driver
  
   jpa:
